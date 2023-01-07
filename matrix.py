@@ -5,7 +5,36 @@ class Matrix:
         self.rows = len(self.matrix)
         self.columns = len(self.matrix[0]) if self.rows > 0 else 0
 
-    def diagonal_differece(self):
+
+    def shape(self):
+        """View dimensions
+
+        Returns:
+            tuple: containing rows and columns.
+        """
+        return (self.rows, self.columns)
+
+    def determinant(self):
+        """Matrix Determinant:
+        """
+        pass
+
+    def transpose(self):
+        """'Matrix Transpose:
+        """
+        pass
+
+    def identity_mat(self):
+        """Product of matrix and its inverse:
+        """
+        pass
+
+    def inverse(self):
+        """'Matrix inverse
+        """
+        pass
+
+    def diagonal_difference(self):
         vert_diagonal, hor_diagonal = 0, 0
 
         for i in range(self.rows):
@@ -17,10 +46,13 @@ class Matrix:
         return vert_diagonal - hor_diagonal
 
 
+
 M = [
-    ['9', '5', '7'],
-    ['8', '3', '0'],
-    ['6', '4', '1']
+    [1, 5, 2],
+    [4, 7, 4],
+    [2, 0, 9]
 ]
-result = Matrix(M).diagonal_differece()
-print(result)
+
+matrix = Matrix(M)
+
+print(matrix.diagonal_difference())
